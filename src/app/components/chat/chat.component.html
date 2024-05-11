@@ -1,0 +1,27 @@
+
+<div class="container mt-5">
+    <h2>Conversación</h2>
+    <div class="card">
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let message of messages">{{message}}</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <input type="text" name="usuario" [(ngModel)]="usuario" [disabled]="inputBlocked" class="form-control">
+            <button class="btn btn-primary" (click)="blockInput()">Iniciar Usuario</button>
+          </div>
+          <div class="form-group">
+            <input type="text" name="message" [(ngModel)]="message" class="form-control">
+            <button class="btn btn-primary" (click)="sendMessage()">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
